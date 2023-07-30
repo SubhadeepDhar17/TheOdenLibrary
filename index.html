@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Oden Library</title>
+</head>
+<body>
+    <header>
+        <h1>The Oden Library</h1>
+    </header>
+    <hr>
+    <nav>
+        <ul>
+            <li>Dashboard</li>
+            <li>Featured</li>
+            <li>Shop</li>
+            <li>Contact Us</li>
+        </ul>
+    </nav>
+    <hr>
+    <main>
+        <button id="newBook" onclick="show()">New Book</button>
+        <form id="form">
+            <label for="title"> Title:&nbsp; &nbsp; &nbsp;
+                <input type="text" id="title">
+            </label> <br> 
+            <label for="author"> Author:&nbsp;&nbsp;
+                <input type="text" id="author">
+            </label> <br>
+            <label for="pages"> Pages: &nbsp;&nbsp;
+                <input type="text" id="pages">
+            </label> <br>
+            <label for="genreList">Genre:&nbsp;&nbsp;
+                <input list="genres" id="genreList">
+                <datalist id="genres">
+                    <option value="Thriller"></option>
+                    <option value="Romance"></option>
+                    <option value="Drama"></option>
+                    <option value="Autobiography"></option>
+                    <option value="Horror"></option>
+                    <option value="Non-Fiction"></option>
+                </datalist>
+            </label> <br>
+            <label for="read"> Read: &nbsp; &nbsp;&nbsp;
+                <input type="checkbox" id="read">
+            </label> <br>
+            <input type="submit" value="Submit" id="submit-form" onclick="addToArray()"> &nbsp; &nbsp;
+            <input type="reset" value="Reset" onclick="reset()">
+            <button id="hideForm" onclick="done()">Close</button>
+        </form>
+        <div id="bookCard">
+        </div>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>
